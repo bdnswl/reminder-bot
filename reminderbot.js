@@ -102,6 +102,10 @@ bot.on("messageCreate", async message => {
     }
 
     if (message.content.startsWith("!remind ")) {
+        if (args[0].toLowerCase == "help") {
+            message.reply("!remind [hours] [minutes] {optional message}")
+        }
+
         let hours = Number(args[0])
         let mins = Number(args[1])
 
