@@ -2,8 +2,8 @@ const Discord = require("discord.js")
 const fs = require("fs")
 
 const botid = "682681577083633763",
-      bottoken =  fs.readFileSync("token.tkn", "utf8"),
-      myID = "167055911179780096"
+      bottoken =  fs.readFileSync("botToken.txt", "utf8"),
+      myID = fs.readFileSync("userID.txt", "utf8")
 
 const bot = new Discord.Client({
     intents: [
@@ -48,7 +48,6 @@ function checkReminders() {
 bot.on("ready", () => {	console.log("ready")
 
 	bot.user.setActivity("!remind | !reminders | !clearreminders")
-    //server = bot.guilds.find("id", genesisServerID)
 
     reminders = fs.readFileSync("./reminders.json")
     reminders = JSON.parse(reminders)
@@ -81,10 +80,6 @@ bot.on("messageCreate", async message => {
 
     if (message.content.startsWith("!eval ") && message.author.id == myID) {
         eval((args.join(" ")))
-    }
-
-    if (message.content.startsWith("!km")) {
-        message.channel.send("https://cdn.discordapp.com/attachments/838004473187926026/855337324175032320/image0.png")
     }
 
     if (message.content.startsWith("!clearreminders")) {
