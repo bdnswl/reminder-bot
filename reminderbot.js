@@ -18,7 +18,7 @@ const bot = new Discord.Client({
 var server,
     reminders = {},
     customCommands = [],
-    usedCommandNames = ["remind", "reminders", "clearreminders", "addCommand", "removeCommand", "commands"]
+    usedCommandNames = ["remind", "reminders", "clearreminders", "addCommand", "removeCommand", "commands", "eval"]
 
 const backUpReminders = () => fs.writeFileSync("./reminders.json", JSON.stringify(reminders))
 const backUpCustoms = () => fs.writeFileSync("./customCommands.json", JSON.stringify(customCommands))
