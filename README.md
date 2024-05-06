@@ -17,10 +17,10 @@ Go to the project directory
 ```
 #### If you don't have node.js, install it from https://nodejs.org/
 
-You'll need discord.js, which can be installed with
+You'll need discord.js, which can be installed automatically with
 
 ```bash
-  npm install discord.js
+  npm install
 ```
 
 Next, edit `userID.txt` with your ID, which can be found one of two ways.
